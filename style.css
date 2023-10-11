@@ -32,12 +32,21 @@ body {
 }
 
 h1 {
+  text-transform: uppercase;
+  text-align: center;
   font-size: 3.2em;
   line-height: 1.1;
 }
 
 #app {
+  border-radius: 5px;
+  border: #535bf2 solid 1px;
   max-width: 1280px;
+  width: 100vh;
+  height: 400px;
+  display: grid;
+  align-items: center;
+  justify-content: center;
   margin: 0 auto;
   padding: 2rem;
   text-align: center;

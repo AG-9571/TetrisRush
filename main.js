@@ -69,13 +69,22 @@ const pices = {
 
 let dropcouter = 0
 let lastestime = 0
+let acceleration = 1 // Velocidad inicial
+let timeSinceLastAcceleration = 0 // Tiempo desde la última aceleración
 
 // Update
 function update (time = 0) {
   const deltaTime = time - lastestime
   lastestime = time
   dropcouter += deltaTime
-  if (dropcouter > 1000) {
+  timeSinceLastAcceleration += deltaTime
+
+  if (timeSinceLastAcceleration > 30000) {
+    timeSinceLastAcceleration = 0
+    acceleration += 0.5
+  }
+
+  if (dropcouter > (1000 / acceleration)) {
     pices.cube.position.y++
     if (checkCollision()) {
       pices.cube.position.y--
