@@ -23,7 +23,7 @@ for (let i = 0; i < boardHeight; i++) {
 // piezas player
 const pices = {
   cube: {
-    position: { x: 5, y: 5 },
+    position: { x: 0, y: 0 },
     shape: [
       [1, 1],
       [1, 1]
@@ -52,7 +52,11 @@ const pices = {
   },
   I: {
     position: { x: 0, y: 0 },
-    shape: [[1, 1, 1, 1]]
+    shape: [
+      [1, 0, 0],
+      [1, 0, 0],
+      [1, 0, 0]
+    ]
   },
   S: {
     position: { x: 0, y: 0 },
