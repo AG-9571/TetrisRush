@@ -1,19 +1,19 @@
+// main js
 import './style.css'
-
+// const
 const canvas = document.querySelector('#tetris')
 const context = canvas.getContext('2d')
 const $span = document.querySelector('span')
 const $score = document.querySelector('#score')
 const $section = document.querySelector('#StartGame')
-
+// grid
 const scale = 20
 const boardWidth = 10
 const boardHeight = 20
 let score = 0
-
+// canvas
 canvas.width = boardWidth * scale
 canvas.height = boardHeight * scale
-
 context.scale(scale, scale)
 // 3. board
 const board = [] // 20 * 10
@@ -66,7 +66,7 @@ const pices = {
     ]
   }
 }
-
+// settng
 let dropcouter = 0
 let lastestime = 0
 let acceleration = 1 // Velocidad inicial
