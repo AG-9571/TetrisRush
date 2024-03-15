@@ -1,5 +1,3 @@
-// main js
-import './style.css'
 // const
 const canvas = document.querySelector('#tetris')
 const context = canvas.getContext('2d')
